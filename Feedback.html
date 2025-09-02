@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 40px;
+    }
+    form {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      width: 400px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    textarea {
+      background-color: #fef6e4; /* Different color for comment box */
+      height: 80px;
+      resize: none;
+    }
+    fieldset {
+      margin-top: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    .btn-container {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+    input[type="submit"], input[type="reset"] {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+    }
+    input[type="submit"] {
+      background-color: #28a745; /* Green for submit */
+    }
+    input[type="reset"] {
+      background-color: #dc3545; /* Red for reset */
+    }
+    input[type="submit"]:hover {
+      background-color: #218838;
+    }
+    input[type="reset"]:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center;">User Feedback Form</h2>
+
+  <form>
+    <!-- Dropdown -->
+    <label for="topic">Choose a topic:</label>
+    <select id="topic" name="topic" required>
+      <option value="">--Select--</option>
+      <option value="website">Website</option>
+      <option value="service">Service</option>
+      <option value="support">Support</option>
+      <option value="other">Other</option>
+    </select>
+
+    <!-- Radio buttons -->
+    <fieldset>
+      <legend>Rate your experience:</legend>
+      <input type="radio" id="excellent" name="experience" value="excellent">
+      <label for="excellent">Excellent</label><br>
+      
+      <input type="radio" id="good" name="experience" value="good">
+      <label for="good">Good</label><br>
+      
+      <input type="radio" id="average" name="experience" value="average">
+      <label for="average">Average</label><br>
+      
+      <input type="radio" id="poor" name="experience" value="poor">
+      <label for="poor">Poor</label>
+    </fieldset>
+
+    <!-- Comment box -->
+    <label for="comments">Additional Comments:</label>
+    <textarea id="comments" name="comments" placeholder="Write your feedback here..."></textarea>
+
+    <!-- Buttons -->
+    <div class="btn-container">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </div>
+  </form>
+
+</body>
+</html>
